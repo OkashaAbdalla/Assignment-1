@@ -1,8 +1,8 @@
 "use strict";
 
-// x = 10; // ReferenceError
+ x = 10; // ReferenceError
 function strictTest() {
-  // y = 20; // ReferenceError
+ y = 20; // ReferenceError
 }
 strictTest();
 
