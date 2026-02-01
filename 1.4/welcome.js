@@ -1,15 +1,27 @@
+ // Personalized Welcome Function
+
+
+// Function that welcomes a user based on name and membership status
 function welcomeUser(name = "Guest", isMember) {
-  if (isMember === true && name === "Guest") {
+  // If the user is a member and no name was provided
+  if (isMember && name === "Guest") {
     console.log("Welcome back, VIP Guest!");
-  } else if (isMember === true) {
+
+  // If the user is a member and has a name
+  } else if (isMember) {
     console.log(`Welcome back, VIP ${name}!`);
+
+  // If the user is not a member
   } else {
     console.log(`Hello and welcome, ${name}!`);
   }
 }
 
-// Call function 4 different ways as required
-welcomeUser("Okasha", true);      // VIP with name
-welcomeUser("Amina", false);      // Non-member
-welcomeUser(undefined, true);     // VIP Guest (default name)
-welcomeUser();                    // Guest (default name, non-member)
+/*
+ * Function Calls
+ */
+
+welcomeUser("Okasha", true);   // Member with a name
+welcomeUser("Amina", false);   // Non-member
+welcomeUser(undefined, true);  // Member with default name (Guest)
+welcomeUser();                 // Non-member with default name
